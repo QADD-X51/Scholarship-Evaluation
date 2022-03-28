@@ -10,7 +10,7 @@ export class InternService {
   readonly baseUrl = "https://localhost:5001"
   readonly httpOption = {
     headers: new HttpHeaders({
-      'Content-Type': 'aplication/json'
+      'Content-Type': 'application/json'
     })
   }
 

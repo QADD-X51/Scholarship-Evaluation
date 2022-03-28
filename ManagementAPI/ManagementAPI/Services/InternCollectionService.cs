@@ -14,7 +14,7 @@ namespace ManagementAPI.Services
         };
         public bool Add(Intern intern)
         {
-            if(UserExists(intern.id))
+            if (UserExists(intern.id))
             {
                 return false;
             }

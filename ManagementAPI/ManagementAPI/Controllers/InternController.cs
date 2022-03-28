@@ -30,10 +30,10 @@ namespace ManagementAPI.Controllers
         public IActionResult AddIntern([FromBody] Intern intern)
         {
             intern.id = Guid.NewGuid();
-            if (intern == null)
+            /*if (intern == null)
             {
                 return BadRequest("Intern should not be null.");
-            }
+            }*/
 
             if (!_internService.Add(intern))
             {
