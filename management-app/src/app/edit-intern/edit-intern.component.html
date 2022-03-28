@@ -1,0 +1,105 @@
+<h1>Edit an Intern </h1>
+<label>Name</label>
+<form>
+    <mat-form-field>
+    <input
+        matInput
+        name="inputName"
+        [(ngModel)]="name"
+        placeholder = "Enter name"
+        required minlength="2"
+        #inputName="ngModel"
+         />
+    </mat-form-field>
+</form>
+
+<span *ngIf="inputName.invalid && (inputName.dirty || inputName.touched)"
+    class="alert">
+
+  <div *ngIf="inputName.errors?.['required']">
+    Name must not be blank.
+  </div>
+  <div *ngIf="inputName.errors?.['minlength']">
+    Name must be at least 2 characters long.
+  </div>
+
+</span>
+
+<label>Surname</label>
+<form>
+    <mat-form-field>
+    <input
+        matInput
+        name="inputSurname"
+        [(ngModel)]="surname"
+        placeholder = "Enter surname"
+        required minlength="2"
+        #inputSurname="ngModel"
+         />
+    </mat-form-field>
+</form>
+
+<span *ngIf="inputSurname.invalid && (inputSurname.dirty || inputSurname.touched)"
+    class="alert">
+
+  <div *ngIf="inputSurname.errors?.['required']">
+    Surname must not be blank.
+  </div>
+  <div *ngIf="inputSurname.errors?.['minlength']">
+    Surname must be at least 2 characters long.
+  </div>
+
+</span>
+  
+<label>Gender</label>
+<form>
+    <mat-form-field>
+    <input
+        matInput
+        name="inputGender"
+        [(ngModel)]="gender"
+        placeholder = "Enter gender"
+        required
+        #inputGender="ngModel"
+         />
+    </mat-form-field>
+</form>
+
+<span *ngIf="inputGender.invalid && (inputGender.dirty || inputGender.touched)"
+    class="alert">
+
+  <div *ngIf="inputGender.errors?.['required']">
+    Gender must not be blank.
+  </div>
+
+</span>
+
+<label>Birth Day</label>
+<form>
+    <mat-form-field>
+    <input
+        matInput
+        type="date"
+        name="inputDate"
+        [(ngModel)]="date"
+        placeholder = "dd-mm-yyyy"
+        required
+        #inputDate="ngModel"
+         />
+    </mat-form-field>
+</form>
+
+<span *ngIf="inputDate.invalid && (inputDate.dirty || inputDate.touched)"
+    class="alert">
+
+  <div *ngIf="inputDate.errors?.['required']">
+    Date must not be blank.
+  </div>
+
+</span>
+
+<div *ngIf="!(inputName.invalid) && !(inputSurname.invalid) && !(inputDate.invalid)">
+  <button mat-button (click) = "EditClick()">Add</button>
+</div>
+
+  

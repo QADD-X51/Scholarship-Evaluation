@@ -10,10 +10,9 @@ namespace ManagementAPI.Models
         public Guid id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public ushort BirthDay { get; set; }
-        public ushort BirthMonth { get; set; }
-        public ushort BirthYear { get; set; }
-        public ushort Age { get; set; }
+        public string BirthDay { get; set; }
+        public string BirthMonth { get; set; }
+        public string BirthYear { get; set; }
         public string Gender { get; set; }
     }
 }

@@ -1,0 +1,20 @@
+<div class="intern" *ngFor="let element of interns">
+    <mat-card>
+        <mat-card-header>
+            {{element.name}} {{element.surname}}
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                Gender: {{element.gender}}
+            </p>
+            <p>
+                Birth Date: {{element.birthDay}}-{{element.birthMonth}}-{{element.birthYear}}
+            </p>
+        </mat-card-content>
+        <div class ="button">
+            <button mat-icon-button routerLink="add-note/{{element.id}}"><mat-icon>settings</mat-icon></button>
+            <button mat-icon-button (click)="DeleteIntern(element.id)"><mat-icon>delete</mat-icon></button>
+         </div>
+    </mat-card>
+</div>
+

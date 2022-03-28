@@ -29,6 +29,7 @@ namespace ManagementAPI.Controllers
         [HttpPost]
         public IActionResult AddIntern([FromBody] Intern intern)
         {
+            intern.id = Guid.NewGuid();
             if (intern == null)
             {
                 return BadRequest("Intern should not be null.");

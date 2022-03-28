@@ -8,7 +8,10 @@ namespace ManagementAPI.Services
 {
     public class InternCollectionService : IInternCollectionService
     {
-        private List<Intern> _interns = new List<Intern>();
+        private List<Intern> _interns = new List<Intern>()
+        {
+            new Intern {Name = "Defaultson" , Surname= "Tess" , BirthDay = "1" , BirthMonth = "1" , BirthYear = "2000" , Gender = "FeMaLe" , id = Guid.NewGuid()}
+        };
         public bool Add(Intern intern)
         {
             if(UserExists(intern.id))
